@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8"/>
+    <title>Registration Form</title>
+    <link th:href="@{/css/register_text.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/register_form.css}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<header>
+    <img src="/images/temp.png"/>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">Registration</a></li>
+            <li><a href="#">Connection</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Donations</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Registration Form</h1>
+        <p>Thank you for choosing to participate in our event. Your response
+            helps our mission to connect everyone to the high-tech world
+
+        <p>The form is private and confidential. We would not share
+            your personal information to third parties.
+        </p>
+    </article>
+</header>
+
+<section>
+    <p>Asterisk (*) marks indicate information that is required to be filled out</p>
+    <form id="survey" name="survey"
+          action=""
+          method="post">
+
+        <fieldset id="custInfo">
+            <legend>Customer Information</legend>
+
+            <label for="custname">Name *</label>
+            <input name="custname" id="custname"
+                   placeholder="first and last name"
+                   required="required"/>
+
+            <label for="street">Street address</label>
+            <input name="street" id="street"/>
+
+            <label for="city">City </label>
+            <input name="city" id="city" value="Irvine"/>
+
+            <label for="state">State (abbr.) </label>
+            <input name="state" id="state" value="CA"/>
+
+            <label for="zip">Postal code</label>
+            <input name="zip" id="zip"
+                   placeholder="nnnnn (-nnnn)"
+                   pattern="^\d{5}(\-\d{4})?$"/>
+
+            <label for="phone">Phone number</label>
+            <input name="phone" id="phone" type="tel"
+                   placeholder="(nnn) nnn-nnnn"
+                   pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
+
+            <label for="email">E-mail *</label>
+            <input name="email" id="email" type="email"
+                   required="required"/>
+
+            <label>Where did you hear about us? <br/>(select all that apply) </label>
+            <select name="infoSrc" id="infoSrc" size="5" multiple="multiple">
+                <option value="internet">Internet</option>
+                <option value="mag">Magazine</option>
+                <option value="news">Newspaper</option>
+                <option value="word">Word of Mouth</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="comments">Any Questions or Comments? </label>
+            <textarea name="comments" id="comments"></textarea>
+
+        </fieldset>
+
+        <label id="newsletter">
+            <input type="checkbox" name="newscb">
+            E-mail me your newsletter for great coupons and specials!
+        </label>
+
+        <p>
+            <input type="submit" value="Submit My Survey"/>
+            <input type="reset" value="Cancel"/>
+        </p>
+
+    </form>
+</section>
+
+<footer>
+    <address>
+        This line is for address
+    </address>
+</footer>
+
+</body>
+
+</html>
