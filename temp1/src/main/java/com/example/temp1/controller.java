@@ -11,7 +11,12 @@ public class controller {
     }
 
     @RequestMapping(value = "/register")
-    public String reigster() {
+    public String register() {
         return "registration";
+    }
+
+    @RequestMapping(value = "/about")
+    public String about() {
+        return "about";
     }
 }

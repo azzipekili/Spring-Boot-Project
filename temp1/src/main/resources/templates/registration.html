@@ -2,7 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
     <meta charset="UTF-8"/>
     <title>Registration Form</title>
     <link th:href="@{/css/register_text.css}" rel="stylesheet" type="text/css">
@@ -12,11 +11,10 @@
 <body>
 
 <header>
-    <img src="/images/temp.png"/>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Information</a></li>
+            <li><a href="#">Message Board</a></li>
             <li><a href="#">Registration</a></li>
             <li><a href="#">Connection</a></li>
             <li><a href="#">Contact Us</a></li>
@@ -27,11 +25,10 @@
 
     <article>
         <h1>Registration Form</h1>
-        <p>Thank you for choosing to participate in our event. Your response
-            helps our mission to connect everyone to the high-tech world
+        <p>Thank you for choosing to participate in our event. Your response helps our mission to connect everyone to
+            the high-tech world
 
-        <p>The form is private and confidential. We would not share
-            your personal information to third parties.
+        <p>The form is private and confidential. We will not share your personal information to third parties.
         </p>
     </article>
 </header>
@@ -43,7 +40,7 @@
           method="post">
 
         <fieldset id="custInfo">
-            <legend>Customer Information</legend>
+            <legend>General Information</legend>
 
             <label for="custname">Name *</label>
             <input name="custname" id="custname"
