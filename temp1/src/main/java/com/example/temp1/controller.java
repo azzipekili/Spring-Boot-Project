@@ -19,4 +19,9 @@ public class controller {
     public String about() {
         return "about";
     }
+
+    @RequestMapping(value = "/pay")
+    public String pay() {
+        return "pay";
+    }
 }
