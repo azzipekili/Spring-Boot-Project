@@ -59,7 +59,7 @@ nav.horizontalNAV li a:hover{
 	width: 40%;
 }
 #announcement h1{
-	font-family: 'Lucida Calligraphy', 'Apple Chancery', cursive; 
+	font-family: 'Lucid Calligraphy', 'Apple Chancery', cursive;
 	font-size: 158%;
 	font-weight: bold; 
 	margin: 10px 0px 0px 10px; 
@@ -81,13 +81,13 @@ nav.horizontalNAV li a:hover{
 	clear: left; 
 	float: left; 
 	margin: 20px 0px 0px 33%; 
-	width: 66%; 
+	width: 66%;
 } 
 /* Article styles*/ 
 #story article { 
 	border-right: 1px solid black; 
 	float: left; 
-	width: 50%; 
+	width: 50%;
 } 
 
 #story article hgroup {
@@ -97,11 +97,11 @@ nav.horizontalNAV li a:hover{
 	background-size: contain;
 	color: rgb(0,0,0);
 	height: 90px; 
-	text-indent: 10px ; 
+	text-indent: 10px ;
 } 
 #story article hgroup h1 { 
 	font-size: 158%; 
-	letter-spacing: 3px; 
+	letter-spacing: 3px;
 } 
 #story article hgroup h2 { 
 font-size: 105%; 
@@ -154,24 +154,27 @@ aside h1 {
 aside h2 { 
 	font-size: 85% ; 
 	font-weight : bold; 
-} 
+}
+
+button{
+    display: block;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+}
 aside p { 
 	font-size: 75%; 
 	margin: 15px; 
 } 
 /* Page footer styles*/ 
-footer {  
-	clear: left; 
-	margin-left: 33%; 
-	width: 66%; 
+footer {
+   clear: left;
+   margin-top: 20px;
+   padding: 10px 0px;
 }
-footer address { 
-	color: rgb(233, 69, 0);
-	font-size: 80%; 
-	font-style : normal; 
-	padding-top: 10px;
-	text-align: center;
-    position: fixed;
-    bottom: 0;
-    left:0
+
+footer address {
+   color: rgb(233, 69, 0);
+   font-style: normal;
+   font-size: 0.8rem;
+   text-align: center;
 }

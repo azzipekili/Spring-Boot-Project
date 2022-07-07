@@ -24,4 +24,14 @@ public class controller {
     public String pay() {
         return "pay";
     }
+
+    @RequestMapping(value = "/donate")
+    public String donate() {
+        return "donate";
+    }
+
+    @RequestMapping(value = "/about_large")
+    public String about_large() {
+        return "about_large";
+    }
 }

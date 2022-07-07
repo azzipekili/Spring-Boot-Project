@@ -26,7 +26,7 @@ nav.horizontalNAV{
 	width: 66%;
 }
 nav.horizontalNAV li{
-	font-size: 87.5%;
+	font-size: 120%;
 	float: left;
 	padding: 15px 0px;
 	text-align: center;
@@ -60,16 +60,16 @@ nav.horizontalNAV li a:hover{
 }
 #announcement h1{
 	font-family: 'Lucid Calligraphy', 'Apple Chancery', cursive;
-	font-size: 158%;
+	font-size: 300%;
 	font-weight: bold; 
 	margin: 10px 0px 0px 10px; 
 }
 #announcement h2{
-	font-size: 105%;
+	font-size: 210%;
 	margin: 0px 0px 10px 15px;
 }
 #announcement p{
-	font-size: 87.5%;
+	font-size: 170%;
 	margin: 0px 40% 20px 15px;
 }
 
@@ -80,7 +80,7 @@ nav.horizontalNAV li a:hover{
 	background-color: rgba(255, 255, 255, 0.8); 
 	clear: left; 
 	float: left; 
-	margin: 20px 0px 0px 33%; 
+	margin: 20px 0px 0px 33%;
 	width: 66%;
 } 
 /* Article styles*/ 
@@ -100,18 +100,18 @@ nav.horizontalNAV li a:hover{
 	text-indent: 10px ;
 } 
 #story article hgroup h1 { 
-	font-size: 158%; 
-	letter-spacing: 3px;
+	font-size: 300%;
+	letter-spacing: 3px; 
 } 
 #story article hgroup h2 { 
-font-size: 105%; 
+font-size: 200%;
 }
 #story article p { 
-	font-size: 80% ; 
+	font-size: 160% ;
 	margin: 10px; 
 } 
 #story article ul li { 
-	font-size: 80%; 
+	font-size: 160%;
 	margin: 15px 25px; 
 } 
 #story article ul li strong { 
@@ -146,13 +146,13 @@ aside {
 	overflow: auto;
 }
 aside h1 { 
-	font-size: 105%; 
+	font-size: 200%;
 	font-weight: bold; 
 	margin-bottom: 25px; 
 	text-align : center; 
 } 
 aside h2 { 
-	font-size: 85% ; 
+	font-size: 160% ;
 	font-weight : bold; 
 }
 
@@ -160,9 +160,10 @@ button{
     display: block;
     color: rgb(0, 0, 0);
     font-style: italic;
+    font-size: 200%
 }
 aside p { 
-	font-size: 75%; 
+	font-size: 150%;
 	margin: 15px; 
 } 
 /* Page footer styles*/ 
@@ -175,6 +176,6 @@ footer {
 footer address {
    color: rgb(233, 69, 0);
    font-style: normal;
-   font-size: 0.8rem;
+   font-size: 200%;
    text-align: center;
 }
