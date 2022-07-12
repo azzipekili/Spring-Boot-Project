@@ -1,0 +1,194 @@
+/* Styles for the Page Body */
+body{
+	background: black url("/images/background.png") top left no-repeat;
+	position: relative;
+	width: 95%;
+	min-width: 1000px;
+	max-width: 1400px;
+	height:100%;
+	display:flex;
+    flex-direction: column;
+}
+
+/* Styles for the Page Header*/ 
+header { 
+	position: absolute; 
+	top: 20px; 
+	left: 20px;
+	height:10%;
+}
+/*General Navigation List Style */
+nav a{
+    display: block;
+	text-decoration: none;
+}
+
+/* Horizontal Navigation List */
+nav.horizontalNAV{
+    display: block;
+	margin-left: 30%;
+	width: 66%;
+}
+nav.horizontalNAV li{
+	font-size: 87.5%;
+	float: left;
+	padding: 15px 0px;
+	text-align: center;
+	width: 20%;
+}
+nav.horizontalNAV li a{
+	color: rgb(255,0,0);
+}
+nav.horizontalNAV li a:hover{
+	color: yellow;
+}
+
+/* announcement message */
+#announcement{
+	background-color: rgba(255,255,255,0.3);
+	background-position: bottom right; 
+	background-repeat: no-repeat; 
+	-o-background- size: 40%; 
+	-moz-background-size: 40%; 
+	-webkit-background- size: 40%; 
+	background-size: 40%; 
+
+	-moz-border-radius: 30px; 
+	-webkit-border-radius: 30px ; 
+	border-radius : 30px;
+
+	clear: left;
+	float: left;
+	margin-left: 33%;
+	width: 40%;
+	height:20%;
+}
+#announcement h1{
+	font-family: 'Lucid Calligraphy', 'Apple Chancery', cursive;
+	font-size: 158%;
+	font-weight: bold; 
+	margin: 10px 0px 0px 10px; 
+}
+#announcement h2{
+	font-size: 105%;
+	margin: 0px 0px 10px 15px;
+}
+#announcement p{
+	font-size: 87.5%;
+	margin: 0px 40% 20px 15px;
+}
+
+
+/* Story section styles*/ 
+#story { 
+	background-color: gray; 
+	background-color: rgba(255, 255, 255, 0.8); 
+	clear: left; 
+	float: left; 
+	margin: 20px 0px 0px 33%; 
+	width: 66%;
+	height:60%;
+} 
+/* Article styles*/ 
+#story article { 
+	border-right: 1px solid black; 
+	float: left; 
+	width: 50%;
+} 
+
+#story article hgroup {
+	-o-background-size : contain; 
+	-moz- background- size: contain; 
+	-webkit-background- size: contain; 
+	background-size: contain;
+	color: rgb(0,0,0);
+	text-indent: 10px ;
+} 
+#story article hgroup h1 { 
+	font-size: 158%; 
+	letter-spacing: 3px;
+} 
+#story article hgroup h2 { 
+font-size: 105%; 
+}
+#story article p { 
+	font-size: 80% ; 
+	margin: 10px; 
+} 
+#story article ul li { 
+	font-size: 80%; 
+	margin: 15px 25px; 
+} 
+#story article ul li strong { 
+	font-weight : bold; 
+} 
+
+/* Figure box styles */
+#story figure { 
+	float: left; 
+	width: 49%; 
+} 
+#story figure img { 
+	border: 5px inset rgb(227, 168, 145 ) ; 
+	display: block; 
+	margin: 30px auto 10px; 
+	width: 80%;
+} 
+#story figure figcaption { 
+	font-size: 75%; 
+	font-style: italic; 
+	text-align: center; 
+} 
+
+/* Sidebar styles*/ 
+aside {
+    top: 300px;
+	color: rgb(145, 98, 78);  
+	position: absolute;
+	left: 10px; 
+	width: 30%;
+	height: 80%;
+	overflow: auto;
+}
+button{
+    display: block;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    text-align:center;
+    margin-bottom: 25px;
+}
+aside h1 { 
+	font-size: 105%; 
+	font-weight: bold; 
+	margin-bottom: 25px; 
+	text-align : center; 
+} 
+aside h2 { 
+	font-size: 85% ; 
+	font-weight : bold; 
+}
+
+aside p { 
+	font-size: 75%; 
+	margin: 15px; 
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+
+/* Page footer styles*/ 
+footer {
+   clear: left;
+   margin-top: 20px;
+   padding: 10px 0px;
+}
+
+footer address {
+   color: rgb(255, 0, 0);
+   font-style: normal;
+   font-size: 0.8rem;
+   text-align: center;
+}

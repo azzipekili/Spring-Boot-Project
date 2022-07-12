@@ -3,12 +3,13 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link th:href="@{/css/pay.css}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 </head>
 <body>
 <div class="row">
     <div class="col-75">
         <div class="container">
-            <form method="post"  action="/pay">
+            <form method="post"  action="/donate">
                 <div class="col-50">
                     <h3>Payment</h3>
                     <label>Accepted Cards</label>
@@ -19,13 +20,16 @@
                         <i class="fa fa-cc-discover" style="color:orange;"></i>
                     </div>
                     <label for="price">Total</label>
-                    <input type="text" id="price" name="price" placeholder="Amount">
+                    <input type="text" id="price" name="price" required="required">
                     <label for="currency">Currency</label>
-                    <input type="text" id="currency" name="currency" placeholder="Enter Currency" value="USD">
+                    <input type="text" id="currency" name="currency" placeholder="Enter Currency" value="USD"
+                           required="required">
                     <label for="method">Payment Method</label>
-                    <input type="text" id="method" name="method" placeholder="Payment Method" value="paypal">
+                    <input type="text" id="method" name="method" placeholder="Payment Method" value="paypal"
+                           required="required" readonly="readonly">
                     <label for="intent">Intent</label>
-                    <input type="text" id="intent" name="intent" value="sale">
+                    <input type="text" id="intent" name="intent" value="sale"
+                           required="required" readonly="readonly">
                     <label for="description">Payment Description</label>
                     <input type="text" id="description" name="description" placeholder="Payment Description">
 
@@ -34,6 +38,7 @@
                 <input type="submit" value="Continue to checkout" class="btn">
             </form>
         </div>
+    </div>
     </div>
 </div>
 

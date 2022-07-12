@@ -1,21 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8"/>
-    <link href="css/styles.css" rel="stylesheet"/>
-    <title>Spring Boot Form Demo</title>
+    <title>Temporary Title</title>
+    <link rel="stylesheet" th:href="@{/css/home_default.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/home_styles.css}" type="text/css">
 </head>
-<body>
-<div align="center">
-    <h1>
-        Spring Boot Form Demo
-       <p><a href="/register">Click here to register</a></p>
-    </h1>
 
-    <h1>
-        Spring Boot Home Demo
-        <p><a href="/about">Click here to about page</a></p>
-    </h1>
-</div>
+<body>
+
+<header>
+    <img src="/images/logo.png"/>
+</header>
+
+<nav class="horizontalNAV">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/register">Registration</a></li>
+        <li><a href="/connection">Connection</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/donate">Donations</a></li>
+    </ul>
+</nav>
+
+<section id="announcement">
+    <hgroup>
+        <h1>Important Announcement</h1>
+        <h2>&mdash; Covid 19 Restrictions</h2>
+    </hgroup>
+    <p>
+
+    </p>
+</section>
+
+<section id="story">
+    <article>
+        <hgroup>
+            <h1>Story Title</h1>
+            <h2>&mdash; First_Name Last_Name</h2>
+        </hgroup>
+        <p>
+            What the event helps the student develop
+        </p>
+        <ul>
+            <li><strong>Trait 1</strong> Description
+            </li>
+            <li><strong>Trait 2</strong> Description
+            </li>
+            <li><strong>Trait 3</strong> Description
+            </li>
+        </ul>
+    </article>
+
+    <figure>
+        <img src="/images/rim.png"/>
+        <figcaption>
+            image description
+        </figcaption>
+    </figure>
+
+</section>
+
+<aside>
+    <div>
+        <button type="button" onclick="window.location.href='/home_large';>">
+            Click here for larger font
+        </button>
+    </div>
+    <h1>Upcoming Events</h1>
+    <div>
+        <h2><strong>August 1</strong> <em>Event 1</em></h2>
+        <p>
+            Event description
+        </p>
+    </div>
+    <div>
+        <h2><strong>August 2</strong> <em>Event 2</em></h2>
+        <p>Location: <em>Location_name</em></p>
+        <p>
+            Event Description
+        </p>
+    </div>
+
+</aside>
+
+<footer>
+    <address>
+        This line is for address
+    </address>
+</footer>
+
 </body>
+
 </html>

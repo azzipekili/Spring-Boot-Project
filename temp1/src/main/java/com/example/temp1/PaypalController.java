@@ -18,8 +18,8 @@ public class PaypalController {
     @Autowired
     PaypalService service;
 
-    public static final String SUCCESS_URL = "success";
-    public static final String CANCEL_URL = "cancel";
+    public static final String SUCCESS_URL = "pay/success";
+    public static final String CANCEL_URL = "pay/cancel";
 
     @PostMapping("/pay")
     public String payment(@ModelAttribute("order") Order order) {
@@ -37,7 +37,26 @@ public class PaypalController {
 
             e.printStackTrace();
         }
-        return "redirect:/";
+        return "/";
+    }
+
+    @PostMapping("/donate")
+    public String donation(@ModelAttribute("order") Order order) {
+        try {
+            Payment donation = service.createPayment(order.getPrice(), order.getCurrency(), order.getMethod(),
+                    order.getIntent(), order.getDescription(), "http://localhost:8080/" + CANCEL_URL,
+                    "http://localhost:8080/" + SUCCESS_URL);
+            for(Links link:donation.getLinks()) {
+                if(link.getRel().equals("approval_url")) {
+                    return "redirect:"+link.getHref();
+                }
+            }
+
+        } catch (PayPalRESTException e) {
+
+            e.printStackTrace();
+        }
+        return "/";
     }
 
     @GetMapping(value = CANCEL_URL)
@@ -51,12 +70,12 @@ public class PaypalController {
             Payment payment = service.executePayment(paymentId, payerId);
             System.out.println(payment.toJSON());
             if (payment.getState().equals("approved")) {
-                return "success";
+                return "/success";
             }
         } catch (PayPalRESTException e) {
             System.out.println(e.getMessage());
         }
-        return "redirect:/";
+        return "/cancel";
     }
 
 }

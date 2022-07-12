@@ -2,10 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="ISO-8859-1"/>
     <title>Registration Form</title>
     <link th:href="@{/css/register_text.css}" rel="stylesheet" type="text/css">
     <link th:href="@{/css/register_form.css}" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -36,64 +38,63 @@
 <section>
     <p>Asterisk (*) marks indicate information that is required to be filled out</p>
     <form id="survey" name="survey"
-          action=""
-          method="post">
+          method="post"
+          th:action="@{/save}"
+          th:object="${student}">
 
-        <fieldset id="custInfo">
+        <fieldset id="userInfo">
             <legend>General Information</legend>
 
-            <label for="custname">Name *</label>
-            <input name="custname" id="custname"
-                   placeholder="first and last name"
-                   required="required"/>
+            <label for="first_name">First Name *</label>
+            <input name="first_name" id="first_name"
+                   placeholder="First name"
+                   required="required" th:field="*{firstName}"/>
 
-            <label for="street">Street address</label>
-            <input name="street" id="street"/>
+            <label for="last_name">Last Name *</label>
+            <input name="last_name" id="last_name"
+                   placeholder="Last name"
+                   required="required"
+                   th:field="*{lastName}"/>
 
-            <label for="city">City </label>
-            <input name="city" id="city" value="Irvine"/>
+            <label>Gender <br/> </label>
+            <select name="infoSrc" id="infoSrc" size="5" multiple="multiple" th:field="*{gender}">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="T">Transgender</option>
+                <option value="Other">Other</option>
+                <option value="N/A">Prefer not to answer</option>
+            </select>
 
-            <label for="state">State (abbr.) </label>
-            <input name="state" id="state" value="CA"/>
+            <label for="age">Age</label>
+            <input name="age" id="age" required="required" th:field="*{age}"/>
 
-            <label for="zip">Postal code</label>
-            <input name="zip" id="zip"
-                   placeholder="nnnnn (-nnnn)"
-                   pattern="^\d{5}(\-\d{4})?$"/>
 
             <label for="phone">Phone number</label>
             <input name="phone" id="phone" type="tel"
                    placeholder="(nnn) nnn-nnnn"
-                   pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
+                   pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+                   th:field="*{mobileNumber}"/>
 
             <label for="email">E-mail *</label>
             <input name="email" id="email" type="email"
-                   required="required"/>
-
-            <label>Where did you hear about us? <br/>(select all that apply) </label>
-            <select name="infoSrc" id="infoSrc" size="5" multiple="multiple">
-                <option value="gender">Gender</option>
-                <option value="m">Male</option>
-                <option value="f">Female</option>
-                <option value="t">Transgender</option>
-                <option value="other">Other</option>
-            </select>
+                   required="required"
+                   th:field="*{email}"/>
 
             <label for="comments">Any Questions or Comments? </label>
-            <textarea name="comments" id="comments"></textarea>
+            <textarea name="comments" id="comments" th:field="*{comment}"></textarea>
+
 
         </fieldset>
 
         <label id="newsletter">
-            <input type="checkbox" name="newscb">
+            <input type="checkbox" name="news">
             Email me notifications and confirmation email
         </label>
 
         <p>
-            <a href="/pay"><input type="submit" value="Proceed to Payment"/></a>
-            <input type="reset" value="Cancel"/>
+            <a href="/welcome"><input type="submit" value="Next"/></a>
+            <a href="/"><input type="reset" value="Cancel"/></a>
         </p>
-
     </form>
 </section>
 
@@ -102,7 +103,10 @@
         This line is for address
     </address>
 </footer>
-
+<script type="text/javascript">
+//Data Picker Initialization
+$('.datepicker').datepicker();
+</script>
 </body>
 
 </html>
